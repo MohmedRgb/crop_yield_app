@@ -1,0 +1,8 @@
+
+# Feature Engineering
+df['Rainfall_Fertilizer_Sum'] = df['Rainfall'] + df['Fertilizer']
+df['Temp_Fertilizer_Rainfall_Interaction'] = df['Temperature'] * df['Fertilizer'] * df['Rainfall']
+df['Rainfall_Temperature_Fertilizer_Ratio'] = (df['Rainfall'] + 1) / (df['Temperature'] + df['Fertilizer'] + 1)
+
+
+
