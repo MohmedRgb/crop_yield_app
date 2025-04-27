@@ -4,22 +4,7 @@ import json
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.models import load_model
 
-import os
-
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
-
-if not os.path.exists("best_model.keras"):
-    print("ERROR: Model file 'best_model.keras' not found!")
-else:
-    print("Model file found successfully.")
-
-
-
-try:
-    model = load_model("best_model.keras")
-    print("Model loaded successfully.")
-except Exception as e:
-    print(f"Error loading model: {e}")
+model = load_model("best_model.keras")
 
 # تحميل أسماء الكلاسات
 with open("class_names.json") as f:
