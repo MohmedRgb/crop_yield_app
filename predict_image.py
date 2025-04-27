@@ -6,6 +6,8 @@ from tensorflow.keras.models import load_model
 
 import os
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
 if not os.path.exists("best_model.keras"):
     print("ERROR: Model file 'best_model.keras' not found!")
 else:
