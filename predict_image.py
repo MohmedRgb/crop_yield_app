@@ -4,7 +4,20 @@ import json
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.models import load_model
 
-model = load_model("best_model.keras")
+import os
+
+if not os.path.exists("best_model.keras"):
+    print("ERROR: Model file 'best_model.keras' not found!")
+else:
+    print("Model file found successfully.")
+
+
+
+try:
+    model = load_model("best_model.keras")
+    print("Model loaded successfully.")
+except Exception as e:
+    print(f"Error loading model: {e}")
 
 # تحميل أسماء الكلاسات
 with open("class_names.json") as f:
