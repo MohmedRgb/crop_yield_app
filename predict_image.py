@@ -4,10 +4,10 @@ import json
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.models import load_model
 
-print("Current working directory:", os.getcwd())
-print("Files in current directory:", os.listdir())
 
 import os
+print("Current working directory:", os.getcwd())
+print("Files in current directory:", os.listdir())
 if not os.path.exists("best_model.keras"):
     print("ERROR: Model file not found!")
 else:
